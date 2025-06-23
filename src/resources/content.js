@@ -1,268 +1,223 @@
-import { Logo } from "@once-ui-system/core";
+import {Logo} from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  get name() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+    firstName: "Lurk",
+    lastName: "Works",
+    get name() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+    role: "Software Developer",
+    avatar: "/images/avatar.jpg",
+    email: "lurkworks@appmail.uk",
+    location: "Asia/Tokyo",
+    languages: ["Japanese", "English"],
 };
 
 const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
+    display: true,
+    title: <>Subscribe to {person.firstName}'s Newsletter</>,
+    description: (
+        <>
+            I write about Java, Kotlin, and software development. Follow along as I share insights on creating magical
+            developer tools and applications.
+        </>
+    ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
+    {
+        name: "GitHub",
+        icon: "github",
+        link: "https://github.com/lurkworks/",
+    },
+    {
+        name: "Email",
+        icon: "email",
+        link: `mailto:${person.email}`,
+    },
 ];
 
 const home = {
-  path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
-  featured: {
-    display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
-  subline: (
-    <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
+    path: "/",
+    image: "/images/og/home.jpg",
+    label: "Home",
+    title: `${person.name}'s Portfolio`,
+    description: `Portfolio website showcasing my work as a ${person.role}`,
+    headline: <>Crafting Magical Software Solutions</>,
+    featured: {
+        display: true,
+        title: <>Recent project: <strong className="ml-4">Java & Kotlin Tools</strong></>,
+        href: "/work/building-developer-tools",
+    },
+    subline: (
+        <>
+            I'm Lurk, a software developer from Japan who loves working with Java and Kotlin.
+            <br/> Building tools and applications that make developers' lives easier.
+        </>
+    ),
 };
 
 const about = {
-  path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
-  },
-  avatar: {
-    display: true,
-  },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
-  },
-  intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
-    ),
-  },
-  work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
-      {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+    path: "/about",
+    label: "About",
+    title: `About – ${person.name}`,
+    description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+    tableOfContent: {
+        display: true,
+        subItems: false,
+    },
+    avatar: {
+        display: true,
+    },
+    calendar: {
+        display: true,
+        link: "https://cal.com",
+    },
+    intro: {
+        display: true,
+        title: "Introduction",
+        description: (
+            <>
+                Based in Japan, Lurk is a passionate software developer specializing in Java and Kotlin development.
+                With a keen eye for creating efficient and user-friendly developer tools, he focuses on building
+                applications that seamlessly blend functionality with innovation.
+            </>
+        ),
+    },
+    work: {
+        display: true,
+        title: "Work Experience",
+        experiences: [
+            {
+                company: "Argano Corporation",
+                timeframe: "2024 - Present",
+                role: "Senior Software Developer",
+                achievements: [
+                    <>
+                        Leading backend server development using Node.js, including infrastructure design and
+                        implementation.
+                    </>,
+                    <>
+                        Spearheading API development, database design, and infrastructure environment setup as a backend
+                        engineer.
+                    </>,
+                ],
+                images: [
+                    {
+                        src: "/images/projects/project-01/cover-01.jpg",
+                        alt: "Developer Tools Project",
+                        width: 16,
+                        height: 9,
+                    },
+                ],
+            },
+
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+    },
+    studies: {
+        display: true,
+        title: "Studies",
+        institutions: [
+            {
+                name: "Self-Taught Java Development",
+                description: <>Learning Java and software development independently, collaborating with AI assistants
+                    for continuous improvement</>,
+            },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+    },
+    technical: {
+        display: true,
+        title: "Technical skills",
+        skills: [
+            {
+                title: "Java Development",
+                description: <>Expert in building scalable applications and developer tools with Java</>,
+                images: [
+                    {
+                        src: "/images/projects/project-01/cover-02.jpg",
+                        alt: "Java Project",
+                        width: 16,
+                        height: 9,
+                    },
+                ],
+            },
+            {
+                title: "Kotlin　Development",
+                description: <>Creating modern, concise, and powerful applications using Kotlin</>,
+                images: [
+                    {
+                        src: "/images/projects/project-01/cover-04.jpg",
+                        alt: "Kotlin Project",
+                        width: 16,
+                        height: 9,
+                    },
+                ],
+            },
         ],
-        images: [],
-      },
-    ],
-  },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
-    ],
-  },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
-  },
+    },
 };
 
 const blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+    path: "/blog",
+    label: "Blog",
+    title: "Insights on Software Development",
+    description: `Read ${person.name}'s thoughts on Java, Kotlin, and software engineering`,
 };
 
 const work = {
-  path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+    path: "/work",
+    label: "Work",
+    title: `Projects – ${person.name}`,
+    description: `Software development projects by ${person.name}`,
 };
 
 const gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
+    path: "/gallery",
+    label: "Gallery",
+    title: `Photo gallery – ${person.name}`,
+    description: `A collection of development projects and coding adventures`,
+    images: [
+        {
+            src: "/images/gallery/horizontal-1.jpg",
+            alt: "image",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/horizontal-2.jpg",
+            alt: "image",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/horizontal-3.jpg",
+            alt: "image",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/horizontal-4.jpg",
+            alt: "image",
+            orientation: "horizontal",
+        },
+        {
+            src: "/images/gallery/vertical-1.jpg",
+            alt: "image",
+            orientation: "vertical",
+        },
+        {
+            src: "/images/gallery/vertical-2.jpg",
+            alt: "image",
+            orientation: "vertical",
+        },
+        {
+            src: "/images/gallery/vertical-3.jpg",
+            alt: "image",
+            orientation: "vertical",
+        },
+        {
+            src: "/images/gallery/vertical-4.jpg",
+            alt: "image",
+            orientation: "vertical",
+        },
+    ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export {person, social, newsletter, home, about, blog, work, gallery};

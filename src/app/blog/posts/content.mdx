@@ -47,15 +47,15 @@ Your personal details are used across the whole app to render personalized headi
   {
     code:
 `const person = {
-    firstName: "Selene",
-    lastName: "Yu",
+    firstName: "Lurk",
+    lastName: "Works",
     get name() {
       return "...";
     },
-    role: "Design Engineer",
+    role: "Software Developer",
     avatar: "/images/avatar.jpg",
-    location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+    location: "Asia/Tokyo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ["Japanese", "English"], // optional: Leave the array empty if you don't want to display languages
 };`,
     language: "tsx",
     label: "src/app/resources/content.js"
@@ -75,12 +75,12 @@ Social links are rendered on the `/about` page and in the footer based on the ar
     {
       name: "GitHub",
       icon: "github",
-      link: "https://github.com/once-ui-system/nextjs-starter",
+      link: "https://github.com/lurkworks/",
     },
     {
       name: "Email",
-      icon: "email",
-      link: "mailto:lorant@once-ui.com",
+      icon: "email", 
+      link: "mailto:contact@lurkworks.dev",
     },
 ];`,
     language: "tsx",
@@ -99,13 +99,13 @@ Each page have it's own object that manages the personalized content, such as he
     code:
 `const home = {
     label: "Home",
-    title: "Selene Yu's Portfolio",
-    description: "Portfolio website showcasing my work as a Design Engineer",
-    headline: <>Design engineer and builder</>,
+    title: "Lurk Works's Portfolio",
+    description: "Portfolio of a passionate Java & Kotlin developer based in Japan",
+    headline: <>Software Developer & Magic Maker</>,
     subline: (
       <>
-        I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-        <br /> user experiences. After hours, I build my own projects.
+        I'm Lurk, a software developer passionate about <InlineCode>Java</InlineCode> and <InlineCode>Kotlin</InlineCode>
+        <br /> Creating magical products that make life easier through code.
       </>
     ),
 };`,
